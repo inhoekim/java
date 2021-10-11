@@ -21,7 +21,7 @@ class Book{
 		return bookNum;
 	}
 }
-public class Test_Final {
+public class Assignment_1 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		boolean switch_on = true;
