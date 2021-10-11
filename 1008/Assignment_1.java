@@ -2,6 +2,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Scanner;
 
+
 public class Assignment_1 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
