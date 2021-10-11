@@ -1,7 +1,7 @@
 import java.util.Calendar;
 import java.util.Scanner;
 
-public class Test_Final2 {
+public class Assignment_2 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("년도 : ");
