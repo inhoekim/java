@@ -34,11 +34,11 @@ public class Assignment1 {
 			return;
 		}
 		// 경로에 해당하는 폴더를 찾은 경우 진행
-		dirRoot = dir.getAbsolutePath(); // 사용자가 입력한 경로는 \ 개수같은것이 통일되지 않았을 확률이 높으므로 getAbsolutePath로 확실히 처리해줌
+		dirRoot = dir.getAbsolutePath(); // 사용자가 입력한 경로는 '\' 개수같은 것이 통일되지 않았을 확률이 높으므로 getAbsolutePath로 확실히 처리해줌
 		System.out.println("복사본 폴더의 이름을 결정해주세요. 저장경로는 기존에 입력하신 경로입니다");
 		String newDir = sc.next();
 		
-		newDirRoot = dirRoot + "\\..\\" + newDir; // 상대주소 결정법 ..을 이용해서 뒤로 한번 이동했다가 새로운 폴더이름 newDir를 추가해주는 방식
+		newDirRoot = dirRoot + "\\..\\" + newDir; // 상대주소 결정법 '..' 을 이용해서 뒤로 한번 이동했다가 새로운 폴더이름인 newDir를 추가해주는 방식
 		//작업진행
 		makeDir(newDirRoot); // newDirRoot 폴더부터 생성하고 시작
 		copyDir(dir);
@@ -86,13 +86,13 @@ public class Assignment1 {
 	public static void makeDir(String newDirPath) {
 		File newDir = new File(newDirPath);
 		if(!newDir.exists()) {
-			newDir.mkdir(); //File.mkdir() 디렉토리를 만들어주는 메서드
+			newDir.mkdir(); //File.mkdir() : 디렉토리를 만들어주는 메서드
 			System.out.println(newDir.getName() + " 폴더를 생성했습니다");
 		}
 	}
 	//복사할 폴더의 경로에 알맞게 기존 파일의 path를 바꿔주는 함수
 	public static String makePath(String path) {
-		path = path.substring(dirRoot.length());//기존 경로인 dirRoot가 포함된 부분을 잘라내고 newDirRoot에 이어붙인다
+		path = path.substring(dirRoot.length());// 기존 경로인 dirRoot가 포함된 부분을 잘라낸 뒤 newDirRoot경로의 뒤에 이어붙인다
 		String newDirPath = newDirRoot + path;
 		return newDirPath;
 	}
