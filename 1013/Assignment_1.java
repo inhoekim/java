@@ -63,9 +63,9 @@ public class Assignment1 {
 		BufferedWriter bw = null;
 		BufferedReader br = null;
 		try {
-			String newDirPath = makePath(f.getAbsolutePath());
+			String newFilePath = makePath(f.getAbsolutePath());
 			br = new BufferedReader(new FileReader(f));
-			bw = new BufferedWriter(new FileWriter(newDirPath));
+			bw = new BufferedWriter(new FileWriter(newFilePath));
 			String temp;
 			while((temp = br.readLine()) != null) {
 				bw.write(temp);
