@@ -66,7 +66,7 @@ public class Assignment01 {
 		Stream<Book> s_20000 = s.filter(book -> (book.getPrice() >= 20000));
 		s_20000.sorted((book1, book2) -> Integer.compare(book1.getPrice(), book2.getPrice()) * -1)
 		.forEach(book -> System.out.println(book));
-		//4. 전체 도서명을 오름차순정렬해서 출력되도록 해보세요 || Stream.sorted() -> Comparable<T> ->
+		//4. 전체 도서명을 오름차순정렬해서 출력되도록 해보세요 || Stream.sorted() -> Comparable<T> -> int compareTo(T t) 사용
 		System.out.println("=========================================");
 		System.out.println("전체 도서를 이름 오름차순으로 정렬합니다");
 		s = bookList.stream();
