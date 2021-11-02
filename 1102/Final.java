@@ -108,7 +108,7 @@ class JDBC{
 		stmt.executeUpdate(sql);
 		System.out.println(id + "의 비밀번호를 정상적으로 변경하였습니다.");
 	}
-	//Select * from MEMS
+	//Select * from MEMS (전체회원 조회)
 	public void select_all() throws SQLException{
 		String sql = "SELECT * FROM MEMS";
 		ResultSet rs = stmt.executeQuery(sql);
@@ -123,7 +123,7 @@ class JDBC{
 		}
 		System.out.println("<전체회원정보 출력완료>");
 	}
-	//Select * from MEMS M where M.ID = USER_INPUT
+	//Select * from MEMS M where M.ID = USER_INPUT (특정회원 조회)
 	public void select_id() throws SQLException {
 		System.out.println("검색할 회원의 아이디를 입력하세요: ");
 		String id = sc.next();
