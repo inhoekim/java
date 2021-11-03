@@ -277,7 +277,6 @@ public class PurchaseProgram {
 		Scanner sc = new Scanner(System.in);
 		while(flag) {
 			try {
-				
 				System.out.println("-------------------------------------------------------------");
 				System.out.println("1. 제품구매  2.구매정보수정 3.구매정보조회  4.구매취소  5. 프로그램종료");
 				int num = sc.nextInt();
